@@ -4,13 +4,14 @@ services:
     image: mysql
     container_name: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_TCP_PORT: 3332
     ports:
-      - "3306:3306"
+      - "3332:3332"
     volumes:
       - devdojo_data:/var/lib/mysql
-    cap_add:
-      - SYS_NICE # CAP_SYS_NICE
+#    cap_add:
+#      - SYS_NICE # CAP_SYS_NICE
 
 volumes:
   devdojo_data:
