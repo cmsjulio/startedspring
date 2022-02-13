@@ -5,7 +5,7 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_TCP_PORT: 3332
+      MYSQL_TCP_PORT: 3332 #precisou inserir essa linha pra alterar a porta do banco com sucesso.
     ports:
       - "3332:3332"
     volumes:
